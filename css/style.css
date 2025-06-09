@@ -1,0 +1,131 @@
+    :root {
+      --primary-color: #00bfa6;
+      --secondary-color: #027373;
+      --text-color: #e0e0e0;
+      --bg-color: #121212;
+      --section-bg: #1a1a1a;
+      --section-mid-bg: #202020;
+      --card-bg: #262626;
+      --accent-color: #00e5ff;
+      --highlight-color: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    section:nth-of-type(2) {
+      background-color: var(--section-mid-bg);
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--highlight-color);
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: #b0b0b0;
+      margin-bottom: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background-color: var(--primary-color);
+      color: #121212;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: var(--accent-color);
+    }
+
+.planos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .planos {
+    grid-template-columns: 1fr;
+  }
+}
+
+    .plano {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      flex: 1 1 300px;
+      max-width: 350px;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .plano h3 {
+      font-size: 1.75rem;
+      color: var(--highlight-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .plano p {
+      font-size: 1.25rem;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+
+    .plano a {
+      background-color: var(--primary-color);
+      color: #121212;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .plano a:hover {
+      background-color: var(--accent-color);
+      color: #000;
+    }
+
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      margin-top: 2rem;
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.05);
+    }
+
+    @media (max-width: 1024px) {
+      .planos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
