@@ -1,80 +1,198 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nexus Cash - Controle Financeiro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Nexus Cash - Transforme sua Vida Financeira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Estilos para as animações e header -->
+  <style>
+    /* Estilos para as animações de entrada suave dos elementos */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .reveal-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Classe para o header quando a página é rolada */
+    .header-scrolled {
+      background-color: rgba(17, 24, 39, 0.85); /* bg-gray-900 com transparência */
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+  </style>
 </head>
-<body class="font-inter bg-white text-gray-800">
-  <!-- Seção 1: Teste Gratuito -->
-  <section class="bg-gray-100 py-16 text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-4xl font-extrabold mb-4">Experimente o Nexus Cash por 1 mês grátis!</h1>
-      <p class="text-lg mb-6">Comece a controlar suas finanças com um sistema completo de forma inteligente e sem compromisso.</p>
-      <a href="https://apex.oracle.com/pls/apex/r/dataplanilha/finance-system77003/login?session=16257142957703" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-orange-600 transition">Começar agora</a>
+<body class="font-inter bg-gray-900 text-gray-300 antialiased">
+
+  <!-- Header Fixo e Interativo -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-white">Nexus<span class="text-orange-500">Cash</span></a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#sobre" class="text-gray-400 hover:text-orange-500 transition">O que é?</a>
+        <a href="#planos" class="text-gray-400 hover:text-orange-500 transition">Planos</a>
+      </nav>
+      <a href="https://apex.oracle.com/pls/apex/r/dataplanilha/finance-system77003/login?session=16257142957703" class="hidden md:inline-block bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold hover:bg-orange-600 hover:scale-105 transition-transform">
+        Começar agora
+      </a>
+    </div>
+  </header>
+
+  <!-- Seção 1: Herói (Teste Gratuito) -->
+  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 text-center bg-gray-900 overflow-hidden">
+     <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-black"></div>
+    <div class="relative max-w-4xl mx-auto px-4 z-10">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white reveal">
+        Experimente o Nexus Cash por <span class="text-orange-500">1 mês grátis!</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto reveal" style="transition-delay: 200ms;">
+        Comece a controlar suas finanças com um sistema completo de forma inteligente e sem compromisso.
+      </p>
+      <div class="reveal" style="transition-delay: 400ms;">
+        <a href="https://apex.oracle.com/pls/apex/r/dataplanilha/finance-system77003/login?session=16257142957703" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 hover:scale-105 transform">
+          Quero meu teste grátis
+        </a>
+        <p class="text-sm text-gray-500 mt-3">Sem necessidade de cartão de crédito.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Seção 2: Resumo e Objetivos -->
-  <section class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">O que é o Nexus Cash?</h2>
-      <p class="text-lg text-gray-700 mb-6">
-        Nexus Cash é um aplicativo de controle financeiro criado para ajudar você a organizar seus gastos, alcançar metas e ter mais tranquilidade no dia a dia. Desenvolvido com tecnologia de ponta, nossa missão é tornar o controle financeiro acessível, simples e eficiente para todos.
-      </p>
-      <img src="sistema.png" alt="Demonstração do Nexus Cash" class="mx-auto w-full max-w-xl rounded-lg shadow-md">
+  <!-- Seção 2: O que é e Benefícios -->
+  <section id="sobre" class="py-20 bg-gray-800">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <!-- Usando um placeholder de imagem para garantir a visualização -->
+        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Demonstração+Nexus+Cash" alt="Demonstração do Nexus Cash" class="mx-auto w-full max-w-xl rounded-lg shadow-2xl">
+      </div>
+      <div class="reveal" style="transition-delay: 200ms;">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Tenha clareza e controle total sobre seu dinheiro.
+        </h2>
+        <p class="text-lg text-gray-400 mb-8">
+          Nexus Cash é um aplicativo de controle financeiro criado para ajudar você a organizar seus gastos, alcançar metas e ter mais tranquilidade no dia a dia. Nossa missão é tornar o controle financeiro acessível, simples e eficiente.
+        </p>
+        <ul class="space-y-4 text-gray-300">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span><strong class="font-semibold text-white">Organize suas Finanças:</strong> Veja para onde seu dinheiro está indo com categorias personalizáveis.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span><strong class="font-semibold text-white">Alcance Suas Metas:</strong> Crie objetivos de economia e acompanhe seu progresso em tempo real.</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span><strong class="font-semibold text-white">Relatórios Inteligentes:</strong> Entenda seus hábitos financeiros com gráficos e relatórios fáceis de ler.</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Seção 3: Planos de Assinatura -->
-  <section class="py-20 bg-gray-50">
+  <section id="planos" class="py-20 bg-gray-900">
     <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Escolha seu plano</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Um plano para cada necessidade</h3>
+        <p class="text-lg text-gray-400">Escolha o plano que melhor se adapta à sua jornada financeira.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        
         <!-- Plano Básico -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <h4 class="text-xl font-semibold mb-2">Básico</h4>
-          <p class="text-gray-600 mb-4">Ideal para quem está começando</p>
-          <p class="text-3xl font-bold text-orange-500 mb-6">R$ 19,90/mês</p>
-          <ul class="text-gray-700 mb-6 space-y-2">
-            <li>Controle de despesas e receitas</li>
-            <li>Alertas e notificações</li>
-            <li>Exportação de relatórios</li>
-          </ul>
-          <a href="https://pay.kiwify.com.br/KrqJSal" target="_blank" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition">Assinar</a>
+        <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/20 reveal h-full">
+          <div class="flex-grow">
+            <h4 class="text-xl font-semibold mb-2 text-white">Plano Mensal</h4>
+            <p class="text-gray-400 mb-6">Ideal para quem está começando.</p>
+            <p class="text-4xl font-bold text-white mb-6">R$ 29,90<span class="text-2xl font-semibold text-gray-400">,90/mês</span></p>
+            <ul class="text-gray-400 mb-8 space-y-3 text-left">
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Controle de despesas e receitas</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Alertas e notificações</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Exportação de relatórios</li>
+            </ul>
+          </div>
+          <a href="https://pay.kiwify.com.br/KrqJSal" target="_blank" class="mt-auto w-full text-center bg-gray-700 text-white font-semibold px-5 py-3 rounded-lg hover:bg-gray-600 transition">Assinar Básico</a>
         </div>
 
-        <!-- Plano Profissional -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center ">
-          <h4 class="text-xl font-semibold mb-2">Profissional</h4>
-          <p class="text-gray-600 mb-4">Para quem quer mais controle</p>
-          <p class="text-3xl font-bold text-orange-500 mb-6">R$ 39,90/mês</p>
-          <ul class="text-gray-700 mb-6 space-y-2">
-            <li>Todas as funções do Básico</li>
-            <li>Metas personalizadas</li>
-            <li>Dashboard interativo</li>
-            <li>Suporte prioritário</li>
-          </ul>
-          <a href="https://wa.me/5518935001330?text=Olá!%20Tenho%20interesse%20no%20Plano%20Profissional%20do%20Nexus%20Cash." target="_blank" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition">Assinar</a>
+        <!-- Plano Profissional (Destaque) -->
+        <div class="bg-orange-500 text-white rounded-2xl shadow-2xl p-8 flex flex-col ring-4 ring-orange-400 relative transform md:scale-105 reveal h-full">
+           <div class="absolute top-0 -mt-4 left-1/2 -translate-x-1/2 bg-white text-orange-500 text-xs font-bold px-4 py-1 rounded-full">MAIS POPULAR</div>
+           <div class="flex-grow">
+            <h4 class="text-xl font-semibold mb-2 text-white">Plano Semestral</h4>
+            <p class="text-orange-100 mb-6">Mais barato que o mensal.</p>
+            <p class="text-4xl font-bold mb-6 text-white">R$ 159,90<span class="text-2xl font-semibold text-orange-200">,90/mês</span></p>
+            <ul class="mb-8 space-y-3 text-left text-orange-100">
+              <li class="flex items-center"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Todas as funções do Básico</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Metas personalizadas</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Dashboard interativo</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Suporte prioritário</li>
+            </ul>
+          </div>
+          <a href="https://pay.kiwify.com.br/Mpq4aef" target="_blank" class="mt-auto w-full text-center bg-white text-orange-500 font-semibold px-5 py-3 rounded-lg hover:bg-orange-100 transition hover:scale-105 transform">Assinar Profissional</a>
         </div>
 
         <!-- Plano Empresarial -->
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <h4 class="text-xl font-semibold mb-2">Empresarial</h4>
-          <p class="text-gray-600 mb-4">Para pequenas empresas e equipes</p>
-          <p class="text-3xl font-bold text-orange-500 mb-6">R$ 89,90/mês</p>
-          <ul class="text-gray-700 mb-6 space-y-2">
-            <li>Controle multiusuário</li>
-            <li>Relatórios gerenciais</li>
-            <li>Integrações com sistemas</li>
-            <li>Consultoria financeira mensal</li>
-          </ul>
-          <a href="https://wa.me/5518935001330?text=Olá!%20Tenho%20interesse%20no%20Plano%20Empresarial%20do%20Nexus%20Cash." target="_blank" class="bg-orange-500 text-white px-5 py-2 rounded-full hover:bg-orange-600 transition">Assinar</a>
+        <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-orange-500/20 reveal h-full">
+          <div class="flex-grow">
+            <h4 class="text-xl font-semibold mb-2 text-white">Plano Anual</h4>
+            <p class="text-gray-400 mb-6">Para pequenas empresas e equipes.</p>
+            <p class="text-4xl font-bold text-white mb-6">R$ 279,90 <span class="text-2xl font-semibold text-gray-400">,90/mês</span></p>
+            <ul class="text-gray-400 mb-8 space-y-3 text-left">
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Controle multiusuário</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Relatórios gerenciais</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Integrações com sistemas</li>
+              <li class="flex items-center"><svg class="w-5 h-5 text-orange-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Consultoria financeira mensal</li>
+            </ul>
+          </div>
+          <a href="https://pay.kiwify.com.br/13eQvJJ" target="_blank" class="mt-auto w-full text-center bg-gray-700 text-white font-semibold px-5 py-3 rounded-lg hover:bg-gray-600 transition">Falar com consultor</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 border-t border-gray-700 text-white py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center text-gray-400">
+       <p>&copy; 2024 Nexus Cash. Todos os direitos reservados.</p>
+       <div class="flex justify-center space-x-4 mt-4">
+         <a href="#" class="hover:text-orange-400 transition">Facebook</a>
+         <a href="#" class="hover:text-orange-400 transition">Instagram</a>
+         <a href="#" class="hover:text-orange-400 transition">LinkedIn</a>
+       </div>
+    </div>
+  </footer>
+
+  <!-- Script para interatividade -->
+  <script>
+    // Lógica para o header fixo mudar de cor ao rolar
+    const header = document.getElementById('header');
+    window.onscroll = function() {
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    };
+
+    // Lógica para animação de scroll (elementos aparecem suavemente)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, {
+      threshold: 0.1 // O elemento será revelado quando 10% dele estiver visível
+    });
+
+    const elementsToReveal = document.querySelectorAll('.reveal');
+    elementsToReveal.forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
 </body>
 </html>
